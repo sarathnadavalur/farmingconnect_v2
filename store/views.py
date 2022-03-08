@@ -53,7 +53,6 @@ def search(request):
         if keyword:
             products = Product.objects.order_by('id').filter(
                 Q(product_name__icontains=keyword) |
-                Q(provider__icontains=keyword) |
                 Q(description__icontains=keyword) |
                 Q(available_brands__icontains=keyword)
                 )
