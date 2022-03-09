@@ -6,6 +6,7 @@ from carts.views import _cart_id
 from carts.models import CartItem
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.db.models import Q
+from .filters import ProductFilter
 # Create your views here.
 
 def store(request, category_slug=None):
@@ -25,10 +26,13 @@ def store(request, category_slug=None):
         page = request.GET.get('page')
         paged_products = paginator.get_page(page)
         product_count = products.count()
-        
+    
+    filters = ProductFilter(request.GET, queryset=products)
+
     context = {
         'products': paged_products,
         'product_count' : product_count,
+        'filters' : filters,
     }
     return render(request,'store/store.html', context)
 
@@ -61,4 +65,13 @@ def search(request):
         'products' : products,
         'product_count':product_count,
     }
+    return render(request, 'store/store.html',context)
+
+def filter_data(request):
+    products = Product.objects.all()
+    filters = ProductFilter(request.GET, queryset=products)
+    context = {
+        'filters' : filters,
+    }
+    
     return render(request, 'store/store.html',context)

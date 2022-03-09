@@ -1,0 +1,27 @@
+<div class = 'row'>
+    <div class = 'column'>
+        <div class = 'card card-body'>
+            <form method="GET">
+                {{filters.form}}
+                <button class="btn btn-primary" type="submit">
+                    Search
+                </button>
+            </form>
+            <hr>
+            <form method="GET">
+                <table border="1">
+                    <tr>
+                        <th>Products</th>
+                        <th>Available Brands</th>
+                    </tr>
+                    {% for item in filters.qs %}
+                    <tr>
+                        <td>{{item.product_name}}</td>
+                        <td>{{item.available_brands}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
