@@ -29,9 +29,9 @@
 <div class="row">
 	<div class="col-md-3">
 		<div class="card card-product-grid">
-			<a href="{% url 'store' %}" class="img-wrap rounded"> <img src="{% static 'images/banners/farmlands.jpg' %}"> </a>
+			<a href="{% url 'store' %}search/?keyword=farmlands" class="img-wrap rounded"> <img src="{% static 'images/banners/farmlands.jpg' %}"> </a>
 			<figcaption class="info-wrap">
-				<a href="#" class="title b"><h4>Find Farms Online</h4></a>
+				<a href="{% url 'store' %}search/?keyword=farmlands" class="title b"><h4>Find Farms Online</h4></a>
 				<div class="title"> Rent or Lease </div> 
 				<div class="price mt-2"> Krishna District </div> 
 				<div class="price mt-2">Andhra Pradesh</div> 
@@ -40,9 +40,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card card-product-grid">
-			<a href="{% url 'store' %}" class="img-wrap rounded"> <img src="{% static 'images/banners/fertilizer.jpg' %}"> </a>
+			<a href="{% url 'store' %}search/?keyword=fertilizers" class="img-wrap rounded"> <img src="{% static 'images/banners/fertilizer.jpg' %}"> </a>
 			<figcaption class="info-wrap">
-				<a href="{% url 'store' %}" class="title b"><h4>Order Fertilizers Online</h4></a>
+				<a href="{% url 'store' %}search/?keyword=fertilizers" class="title b"><h4>Order Fertilizers Online</h4></a>
 				<div class="title"> Varients available </div> 
 				<div class="price mt-2"> Different Sizes and Brands </div> 
 			</figcaption>
@@ -50,9 +50,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card card-product-grid">
-			<a href="{% url 'store' %}" class="img-wrap rounded"> <img src="{% static 'images/banners/seeds.jpg' %}"> </a>
+			<a href="{% url 'store' %}search/?keyword=seeds" class="img-wrap rounded"> <img src="{% static 'images/banners/seeds.jpg' %}"> </a>
 			<figcaption class="info-wrap">
-				<a href="{% url 'store' %}" class="title b"><h4>Order Seeds Online</h4></a>
+				<a href="{% url 'store' %}search/?keyword=seeds" class="title b"><h4>Order Seeds Online</h4></a>
 				<div class="title"> Imported and Local </div> 
 				<div class="price mt-2"> Varients available </div> 
 			</figcaption>

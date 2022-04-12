@@ -20,6 +20,18 @@ class Product(models.Model):
     images = models.ImageField(upload_to='photos/products',blank=True)
     stock = models.IntegerField()
     is_available = models.BooleanField(default=True)
+    land_amount = models.IntegerField(default=2)
+    soil_type = models.CharField(max_length=200, blank=True)
+    coordinates =  models.CharField(max_length=200, blank=True)
+    major_crop = models.CharField(max_length=200, blank=True)
+    tenure_period = models.IntegerField(default=2)
+    years_market = models.IntegerField(default=2)
+    rating = models.IntegerField(default=2)
+    deal_crops = models.CharField(max_length=200, blank=True)
+    retail_type = models.CharField(max_length=200, blank=True)
+    equipment_type = models.CharField(max_length=200, blank=True)
+    equipment_name = models.CharField(max_length=500, blank=True)
+    equipment_rent = models.IntegerField(default=2)
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
 
 
