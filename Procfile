@@ -1,0 +1,1 @@
+web: gunicorn farmingconnect.wsgi --log-file -
